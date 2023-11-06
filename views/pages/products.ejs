@@ -1,0 +1,15 @@
+<h1>List of Inventory Products</h1>
+
+<!-- Display products when they are available -->
+<ul>
+    <% products.products.forEach((product) => { %>
+        <li>
+            <strong><%= product.title %></strong>
+            <p>Price: <%= product.price %></p>
+            <p>Discount: <%= product.discountPercentage %>%</p>
+            <p>Final Price: <%= product.price - (product.price * (product.discountPercentage / 100)) %></p>
+        </li>
+    <% }); %>
+</ul>
+
+<a href="/">Back to Home</a>
